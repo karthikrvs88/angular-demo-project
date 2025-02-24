@@ -1,0 +1,25 @@
+<div class="card block">
+  <div class="card-header" appHighlight="yellow">
+    Highlight directive
+  </div>
+  <div class="card-body">
+    <p *appWrapInDiv="wrapDiv">Bootstrap card with custom directive</p>
+  </div>
+  <div class="card-footer">
+    <button type="button" (click)="enableDirective()">Directive to add/remove div</button>
+  </div>
+</div>
+
+<div class="mt-5">
+  <button class="btn btn-primary" (click)="addCard()">Add Dynamic Card</button>
+</div>
+
+<ng-template #container></ng-template>
+
+
+<div class="block mt-5">
+  Amount suffix addition with Custom pipe
+  <p class="fw-bold mt-3">{{ number | amountSuffix: "million" }}</p>
+</div>
+
+<lib-custom-lib></lib-custom-lib>

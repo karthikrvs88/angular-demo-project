@@ -1,0 +1,25 @@
+<!-- <app-user-add></app-user-add>
+
+<app-user-display></app-user-display> -->
+
+<header>
+    <h4>Search</h4>
+</header>
+
+<div class="block mt-5" style="display: flex; flex-direction: row; gap: 10px;">
+    <input #searchBox type="search" (input)="updateSearch(searchBox.value)" placeholder="Search..." style="padding: 5px; font-size: 16px;">
+
+    <select #categorySelect (change)="updateCategory(categorySelect.value)" style="padding: 5px; font-size: 16px;">
+        <option value="All">All</option>
+        <option value="Fruit">Fruit</option>
+        <option value="Vegetable">Vegetable</option>
+    </select>
+</div>
+
+<div class="block mt-5">
+<ul>
+    <li *ngFor="let item of results$| async">
+        {{item.name}} ( {{item.category}} )
+    </li>
+</ul>
+</div>

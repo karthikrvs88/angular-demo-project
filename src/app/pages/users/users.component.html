@@ -1,0 +1,11 @@
+<div class="mb-3">
+  <button type="button" (click)="addData()">Add user</button>
+</div>
+
+<ag-grid-angular 
+  style="width: 50%;"
+  class="ag-theme-alpine"
+  [rowData]="rowData"
+  [domLayout]="'autoHeight'"
+  [columnDefs]="columnDefs">
+</ag-grid-angular>
